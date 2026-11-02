@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.kalkulatorbmi.CalculatorController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+    <children>
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Kalkulator BMI" textFill="#d2008c" />
+        
+        <GridPane hgap="10.0" vgap="12.0">
+            <children>
+                <Label text="Berat Badan (kg):" textFill="#ff72c9" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="txtBerat" promptText="Contoh: 65" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                
+                <Label text="Tinggi Badan (cm):" textFill="#ff72c9" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="txtTinggi" promptText="Contoh: 170" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <HBox alignment="CENTER" spacing="12.0">
+            <children>
+                <Button onAction="#btnHitungAction" text="Hitung BMI" textFill="#357947" />
+                <Button onAction="#btnResetAction" text="Reset" textFill="RED" />
+            </children>
+        </HBox>
+
+        <VBox alignment="CENTER" spacing="5.0">
+            <children>
+                <Label text="Nilai BMI Anda:" />
+                <Label fx:id="lblHasilBMI" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="0.0" />
+            <Label text="&quot;trust the process -dsyaa&quot;" textFill="#962180" />
+                <Label fx:id="lblKategori" text="-" />
+            </children>
+        </VBox>
+    </children>
+</VBox>
